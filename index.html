@@ -438,17 +438,15 @@
             const sliderContainer = document.getElementById('hero-slider');
             if (!sliderContainer) return;
 
-            // Inject the images into the slider container
-            heroImages.forEach((url, index) => {
-                const img = document.createElement('img');
-                img.src = url;
-                img.classList.add('slide-image');
-                img.onerror = function() {
-                    img.src = `stopwatch.jpg/ffffff?text=Banner+${index + 1}`;
-                    img.src = `beauty.jpg/ffffff?text=Banner+${index + 1}`;
-                    img.src = `ankara.jpg/ffffff?text=Banner+${index + 1}`;
-                    
-                };
+         img.onerror = function() {
+    const fallbacks = [
+        'stopwatch.jpg', // fallback for first slide
+        'beauty.jpg',    // fallback for second slide
+        'ankara.jpg'     // fallback for third slide
+    ];
+    img.src = fallbacks[index] || 'fallback.jpg'; // safe default
+};
+
                 if (index === 0) {
                     img.classList.add('active');
                 }
