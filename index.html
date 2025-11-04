@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top Roll - Daily Essentials, Best Prices & Deals in Mobile, Beauty, Fashion</title>
+    <title>Top Roll - Holiday Deals & Christmas Gifts in Tech, Beauty, Fashion</title>
 
-    <meta name="description" content="Top Roll is your primary source for discovering the best, most affordable deals on high-demand everyday essentials in Mobile Tech, Health & Beauty, and trending Fashion. Shop smart and save big!">
-    <meta name="keywords" content="Nigeria deals, affiliate marketing, cheap electronics, health products, beauty essentials, affordable fashion, Jumia deals, Top Roll, mobile tech, best prices, smart watch, shea butter, ankara, wifi">
+    <meta name="description" content="Top Roll is your Christmas shopping hub! Discover the best holiday deals and gifts on high-demand essentials in Mobile Tech, Health & Beauty, and trending Fashion. Shop smart and save big for the holidays!">
+    <meta name="keywords" content="Christmas deals Nigeria, holiday gifts, cheap electronics, health products, beauty gifts, affordable fashion, Jumia deals, Top Roll, mobile tech gifts, Christmas prices, smart watch, ankara, wifi">
     <meta name="author" content="Top Roll">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // Tailwind Configuration for Gold and Green
+        // Tailwind Configuration for Christmas Colors: Classic Red, Holiday Green, and Gold
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'primary-green': '#004d40', // Deep Emerald Green (The brand core)
-                        'accent-gold': '#FFD700', // Bright Gold/Yellow (Highlight and CTA)
-                        'secondary-green': '#38a169', // Mid-tone accent green (Supporting text)
+                        'primary-red': '#B22222',    // New: Classic Crimson Red (The main brand color for the season)
+                        'accent-gold': '#FFD700',    // Bright Gold (Highlight and CTA - kept the same)
+                        'holiday-green': '#006400',  // New: Dark Forest Green (Supporting color)
+                        'light-snow': '#F0F8FF',     // New: Very light winter accent
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -36,8 +37,8 @@
         }
 
         body {
-            /* Responsive desert gradient background */
-            background: linear-gradient(135deg, #FDF5E6 0%, #E0C59C 50%, #8B4513 100%);
+            /* Festive/Snowy gradient background */
+            background: linear-gradient(135deg, #F0F8FF 0%, #D8BFD8 50%, #B0C4DE 100%);
             background-attachment: fixed;
         }
 
@@ -50,7 +51,7 @@
             top: 0;
             left: 0;
             opacity: 0;
-            transition: opacity 1.5s ease-in-out; /* Slower fade for cinematic effect */
+            transition: opacity 1.5s ease-in-out; 
         }
         .slide-image.active {
             opacity: 1;
@@ -58,12 +59,12 @@
 
         .hero-section { position: relative; overflow: hidden; }
         .hero-overlay {
-            /* Dark green overlay for readability */
-            background: linear-gradient(rgba(0, 77, 64, 0.88), rgba(0, 77, 64, 0.88));
+            /* Dark Green/Red overlay for readability */
+            background: linear-gradient(rgba(178, 34, 34, 0.88), rgba(0, 100, 0, 0.88)); /* Red to Green Overlay */
             position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;
         }
 
-        /* Advanced Button and Input Styling */
+        /* Advanced Button and Input Styling - Gold CTA kept */
         .advanced-gradient-button {
             background: linear-gradient(45deg, #FFD700, #FFA500);
             box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
@@ -78,11 +79,11 @@
         .mobile-menu {
             transform: translateX(100%);
             transition: transform 0.3s ease-out;
-            pointer-events: none; /* Prevents interaction when hidden */
+            pointer-events: none;
         }
         .mobile-menu.open {
             transform: translateX(0);
-            pointer-events: auto; /* Allows interaction when open */
+            pointer-events: auto;
         }
 
     </style>
@@ -91,18 +92,17 @@
 
 <body class="font-sans" onload="initCode()">
 
-    <header class="bg-primary-green bg-opacity-95 shadow-2xl sticky top-0 z-30 backdrop-blur-sm">
+    <header class="bg-primary-red bg-opacity-95 shadow-2xl sticky top-0 z-30 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <div class="text-4xl font-extrabold flex items-center">
-                <span class="text-white">Top</span>
-                <span class="text-accent-gold ml-1">Roll</span>
+                <span class="text-light-snow">Top</span> <span class="text-accent-gold ml-1">Roll</span>
             </div>
             
             <nav class="hidden md:flex space-x-8 text-lg font-bold">
-                <a href="#trending" class="text-red-300 hover:text-accent-gold transition duration-300">🔥 Trending</a>
-                <a href="#tech" class="text-green-200 hover:text-accent-gold transition duration-300">Tech Hub</a>
-                <a href="#beauty" class="text-green-200 hover:text-accent-gold transition duration-300">Beauty Lab</a>
-                <a href="#fashion" class="text-green-200 hover:text-accent-gold transition duration-300">Style Vault</a>
+                <a href="#trending" class="text-light-snow hover:text-accent-gold transition duration-300">🎁 Holiday Deals</a>
+                <a href="#tech" class="text-light-snow hover:text-accent-gold transition duration-300">Tech Gifts</a>
+                <a href="#beauty" class="text-light-snow hover:text-accent-gold transition duration-300">Beauty Stockings</a>
+                <a href="#fashion" class="text-light-snow hover:text-accent-gold transition duration-300">Festive Style</a>
             </nav>
             <button class="md:hidden text-accent-gold focus:outline-none" onclick="toggleMobileMenu()" aria-label="Toggle Mobile Menu">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -110,18 +110,18 @@
         </div>
     </header>
 
-    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-primary-green z-50 shadow-2xl md:hidden flex flex-col pt-20">
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-primary-red z-50 shadow-2xl md:hidden flex flex-col pt-20">
         <button class="absolute top-4 right-4 text-accent-gold focus:outline-none" onclick="closeMobileMenu()" aria-label="Close Mobile Menu">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
         <nav class="flex flex-col space-y-6 p-6 text-xl font-bold">
-            <a href="#trending" onclick="closeMobileMenu()" class="text-red-300 hover:text-accent-gold transition duration-300 border-b border-green-700 pb-2">🔥 Trending</a>
-            <a href="#tech" onclick="closeMobileMenu()" class="text-green-200 hover:text-accent-gold transition duration-300 border-b border-green-700 pb-2">Tech Hub</a>
-            <a href="#beauty" onclick="closeMobileMenu()" class="text-green-200 hover:text-accent-gold transition duration-300 border-b border-green-700 pb-2">Beauty Lab</a>
-            <a href="#fashion" onclick="closeMobileMenu()" class="text-green-200 hover:text-accent-gold transition duration-300 pb-2">Style Vault</a>
+            <a href="#trending" onclick="closeMobileMenu()" class="text-light-snow hover:text-accent-gold transition duration-300 border-b border-holiday-green pb-2">🎁 Holiday Deals</a>
+            <a href="#tech" onclick="closeMobileMenu()" class="text-light-snow hover:text-accent-gold transition duration-300 border-b border-holiday-green pb-2">Tech Gifts</a>
+            <a href="#beauty" onclick="closeMobileMenu()" class="text-light-snow hover:text-accent-gold transition duration-300 border-b border-holiday-green pb-2">Beauty Stockings</a>
+            <a href="#fashion" onclick="closeMobileMenu()" class="text-light-snow hover:text-accent-gold transition duration-300 pb-2">Festive Style</a>
         </nav>
         <div class="mt-auto p-6">
-            <a href="#newsletter" onclick="closeMobileMenu()" class="w-full text-center advanced-gradient-button text-primary-green font-bold py-3 rounded-xl block">
+            <a href="#newsletter" onclick="closeMobileMenu()" class="w-full text-center advanced-gradient-button text-primary-red font-bold py-3 rounded-xl block">
                 Subscribe
             </a>
         </div>
@@ -136,13 +136,13 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
             <h1 class="text-5xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight mb-6 leading-tight">
-                Unlock <span class="text-accent-gold">Tomorrow's Deals</span> Today.
+                Your <span class="text-accent-gold">Christmas Shopping</span> Starts Here.
             </h1>
-            <p class="text-xl sm:text-2xl lg:text-3xl mb-10 font-light text-green-100 max-w-4xl mx-auto opacity-90">
-                Your portal to essential tech, radiant beauty, and trending fashion – all at unbeatable prices.
+            <p class="text-xl sm:text-2xl lg:text-3xl mb-10 font-light text-light-snow max-w-4xl mx-auto opacity-90">
+                Discover the perfect gifts in Tech, Beauty, and Fashion, with massive savings just in time for the holidays!
             </p>
-            <a href="#trending" class="inline-block advanced-gradient-button text-primary-green font-extrabold text-xl py-4 px-10 rounded-full">
-                Explore The Elite Deals
+            <a href="#trending" class="inline-block advanced-gradient-button text-primary-red font-extrabold text-xl py-4 px-10 rounded-full">
+                Explore The Festive Deals
             </a>
         </div>
     </section>
@@ -151,184 +151,184 @@
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 bg-white p-6 rounded-2xl shadow-xl border-t-4 border-accent-gold">
             <h2 class="sr-only">Search for Products</h2>
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <input type="text" id="search-input" placeholder="Discover smartwatches, shea butter, ankara, etc."
+                <input type="text" id="search-input" placeholder="Search for Gifts: Smartwatch, Shea Butter, Festive Wear..."
                        class="flex-grow p-4 text-gray-700 bg-gray-50 border border-gray-300 rounded-xl focus:border-accent-gold focus:ring focus:ring-accent-gold/50"
                        aria-label="Product Search Input">
                 <button onclick="handleSearch()"
-                        class="advanced-gradient-button text-primary-green font-bold py-4 px-8 rounded-xl flex items-center justify-center">
+                        class="advanced-gradient-button text-primary-red font-bold py-4 px-8 rounded-xl flex items-center justify-center">
                     <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                    Filter Deals
+                    Find Gifts
                 </button>
             </div>
-            <p id="search-message" class="mt-4 text-center text-sm font-medium text-gray-600">Enter a keyword above to filter our best deals.</p>
+            <p id="search-message" class="mt-4 text-center text-sm font-medium text-gray-600">Enter a keyword above to filter our best holiday deals.</p>
         </div>
     </section>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 space-y-20">
 
-        <section id="trending" class="p-8 md:p-12 border-4 border-dashed border-accent-gold/50">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-primary-green mb-10 pb-3 border-b-4 border-accent-gold inline-block">
-                🔥 Trending Deals Spotlight
+        <section id="trending" class="p-8 md:p-12 border-4 border-dashed border-accent-gold/50 bg-light-snow/50 rounded-2xl">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-primary-red mb-10 pb-3 border-b-4 border-accent-gold inline-block">
+                🎁 Holiday Gifts & Top Sellers
             </h2>
-            <p class="text-gray-700 mb-10 max-w-2xl text-lg">These are the essential products everyone is buying right now. Don't miss out on these limited-time top sellers.</p>
+            <p class="text-gray-700 mb-10 max-w-2xl text-lg">These are the most popular gifts this season. Secure these top sellers before the final rush!</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-2xl card-hover product-card" data-keywords="smartwatch health fitness sport tech mobile trending">
+                <div class="bg-white p-6 rounded-xl shadow-2xl card-hover product-card" data-keywords="smartwatch health fitness sport tech mobile trending gift">
                     <img src="stopwatch.jpg" alt="Latest generation smartwatch with health tracking features" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-primary-green mb-1">Smartwatch Pro 2025</h3>
-                    <p class="text-sm text-gray-500 mb-2">High-demand item!</p>
-                    <p class="text-lg text-primary-green font-extrabold mb-3">₦ 25,999</p>
+                    <h3 class="text-xl font-bold text-holiday-green mb-1">Smartwatch Pro 2025</h3>
+                    <p class="text-sm text-primary-red mb-2 font-bold">The Perfect Gift!</p>
+                    <p class="text-lg text-holiday-green font-extrabold mb-3">₦ 25,999</p>
                     <div class="flex space-x-2">
-                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SMARTWATCH" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SMARTWATCH" target="_blank" class="w-full text-center advanced-gradient-button text-primary-red font-semibold py-2 rounded-lg text-sm">View Gift Deal</a>
                     </div>
                 </div>
-                 <div class="bg-white p-6 rounded-xl shadow-2xl card-hover product-card" data-keywords="serum vitamin c glow face skin beauty wellness trending">
-                    <img src="https://placehold.co/400x300/38a169/ffffff?text=Vitamin+C+Serum" alt="Powerful Vitamin C face serum for radiant skin" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-primary-green mb-1">Brightening Vitamin C Serum</h3>
-                    <p class="text-sm text-gray-500 mb-2">Selling Fast!</p>
-                    <p class="text-lg text-primary-green font-extrabold mb-3">₦ 5,950</p>
+                 <div class="bg-white p-6 rounded-xl shadow-2xl card-hover product-card" data-keywords="serum vitamin c glow face skin beauty wellness trending gift">
+                    <img src="https://placehold.co/400x300/38a169/ffffff?text=Beauty+Serum+Gift" alt="Powerful Vitamin C face serum for radiant skin" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-holiday-green mb-1">Brightening Vitamin C Serum</h3>
+                    <p class="text-sm text-primary-red mb-2 font-bold">Stocking Filler!</p>
+                    <p class="text-lg text-holiday-green font-extrabold mb-3">₦ 5,950</p>
                     <div class="flex space-x-2">
-                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SERUM" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SERUM" target="_blank" class="w-full text-center advanced-gradient-button text-primary-red font-semibold py-2 rounded-lg text-sm">View Gift Deal</a>
                     </div>
                 </div>
-                 <div class="bg-white p-6 rounded-xl shadow-2xl card-hover product-card" data-keywords="ankara blouse women print fashion style african trending">
+                 <div class="bg-white p-6 rounded-xl shadow-2xl card-hover product-card" data-keywords="ankara blouse women print fashion style african trending gift festive">
                     <img src="ankara.jpg" alt="Modern women's African Ankara print stylish blouse" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-primary-green mb-1">Modern Ankara Print Blouse</h3>
-                    <p class="text-sm text-gray-500 mb-2">Must-Have Style!</p>
-                    <p class="text-lg text-primary-green font-extrabold mb-3">₦ 15,200</p>
+                    <h3 class="text-xl font-bold text-holiday-green mb-1">Modern Ankara Print Blouse</h3>
+                    <p class="text-sm text-primary-red mb-2 font-bold">Festive Wear!</p>
+                    <p class="text-lg text-holiday-green font-extrabold mb-3">₦ 15,200</p>
                     <div class="flex space-x-2">
-                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_ANKARA" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_ANKARA" target="_blank" class="w-full text-center advanced-gradient-button text-primary-red font-semibold py-2 rounded-lg text-sm">View Gift Deal</a>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-2xl card-hover product-card" data-keywords="wifi mesh router internet network tech mobile trending">
-                    <img src="https://placehold.co/400x300/004d40/ffffff?text=Mesh+WiFi+System" alt="Whole-home mesh WiFi system for fast internet" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-primary-green mb-1">Whole-Home Mesh WiFi Kit</h3>
-                    <p class="text-sm text-gray-500 mb-2">Essential Upgrade!</p>
-                    <p class="text-lg text-primary-green font-extrabold mb-3">₦ 45,000</p>
+                <div class="bg-white p-6 rounded-xl shadow-2xl card-hover product-card" data-keywords="wifi mesh router internet network tech mobile trending gift">
+                    <img src="https://placehold.co/400x300/006400/ffffff?text=Mesh+WiFi+Gift+System" alt="Whole-home mesh WiFi system for fast internet" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-holiday-green mb-1">Whole-Home Mesh WiFi Kit</h3>
+                    <p class="text-sm text-primary-red mb-2 font-bold">Essential Gift!</p>
+                    <p class="text-lg text-holiday-green font-extrabold mb-3">₦ 45,000</p>
                     <div class="flex space-x-2">
-                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_WIFI" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_WIFI" target="_blank" class="w-full text-center advanced-gradient-button text-primary-red font-semibold py-2 rounded-lg text-sm">View Gift Deal</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="tech" class="p-8 md:p-12">
-            <h2 class="text-3xl sm:text-4xl font-bold text-primary-green mb-10 pb-3 border-b-4 border-accent-gold inline-block">
-                ⚡ Mobile & Tech Nexus
+            <h2 class="text-3xl sm:text-4xl font-bold text-primary-red mb-10 pb-3 border-b-4 border-accent-gold inline-block">
+                📱 Tech Gifts Nexus
             </h2>
-            <p class="text-gray-700 mb-10 max-w-2xl text-lg">Stay connected and powered up. Explore cutting-edge gadgets and essential mobile accessories designed for the modern Nigerian.</p>
+            <p class="text-gray-700 mb-10 max-w-2xl text-lg">Give the gift of connectivity and power. Explore cutting-edge gadgets and essential mobile gifts.</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="smartwatch health fitness sport tech mobile">
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="smartwatch health fitness sport tech mobile gift">
                     <img src="stopwatch.jpg" alt="Latest generation smartwatch with health tracking features" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-primary-green mb-2">Health Tracking Smartwatch</h3>
-                    <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 22,500</p>
+                    <h3 class="text-xl font-semibold text-holiday-green mb-2">Health Tracking Smartwatch</h3>
+                    <p class="text-lg text-primary-red font-extrabold mb-3">₦ 22,500</p>
                     <div class="flex space-x-2">
-                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SMARTWATCH" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SMARTWATCH" target="_blank" class="w-full text-center advanced-gradient-button text-primary-red font-semibold py-2 rounded-lg text-sm">View Gift Deal</a>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="power bank rapid charge 20000mah tech mobile">
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="power bank rapid charge 20000mah tech mobile gift">
                     <img src="powerbank.jpg" alt="High capacity 20,000mAh power bank for mobile devices" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-primary-green mb-2">20,000mAh Rapid Power</h3>
-                    <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 11,500</p>
+                    <h3 class="text-xl font-semibold text-holiday-green mb-2">20,000mAh Rapid Power</h3>
+                    <p class="text-lg text-primary-red font-extrabold mb-3">₦ 11,500</p>
                     <div class="flex space-x-2">
-                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_POWERBANK" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_POWERBANK" target="_blank" class="w-full text-center advanced-gradient-button text-primary-red font-semibold py-2 rounded-lg text-sm">View Gift Deal</a>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="wireless earbuds tws audio music tech mobile">
-                    <img src="https://placehold.co/400x300/38a169/ffffff?text=Wireless+Earbuds" alt="TWS Budget Wireless Earbuds for immersive audio" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-primary-green mb-2">TWS Budget EarPods</h3>
-                    <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 7,990</p>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="wireless earbuds tws audio music tech mobile gift">
+                    <img src="https://placehold.co/400x300/006400/ffffff?text=Wireless+Earbuds+Gift" alt="TWS Budget Wireless Earbuds for immersive audio" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-holiday-green mb-2">TWS Budget EarPods</h3>
+                    <p class="text-lg text-primary-red font-extrabold mb-3">₦ 7,990</p>
                     <div class="flex space-x-2">
-                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_EARBUDS" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_EARBUDS" target="_blank" class="w-full text-center advanced-gradient-button text-primary-red font-semibold py-2 rounded-lg text-sm">View Gift Deal</a>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="charger fast 45w usb wall tech mobile">
-                    <img src="https://placehold.co/400x300/FFD700/004d40?text=USB+Charger" alt="45W Ultra-Fast USB Wall Charger for quick charging" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-primary-green mb-2">45W Ultra-Fast Charger</h3>
-                    <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 3,450</p>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="charger fast 45w usb wall tech mobile gift">
+                    <img src="https://placehold.co/400x300/FFD700/B22222?text=Fast+Charger+Gift" alt="45W Ultra-Fast USB Wall Charger for quick charging" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-holiday-green mb-2">45W Ultra-Fast Charger</h3>
+                    <p class="text-lg text-primary-red font-extrabold mb-3">₦ 3,450</p>
                     <div class="flex space-x-2">
-                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_CHARGER" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_CHARGER" target="_blank" class="w-full text-center advanced-gradient-button text-primary-red font-semibold py-2 rounded-lg text-sm">View Gift Deal</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="beauty" class="p-8 md:p-12">
-            <h2 class="text-3xl sm:text-4xl font-bold text-primary-green mb-10 pb-3 border-b-4 border-accent-gold inline-block">
-                💖 Beauty & Wellness Matrix
+            <h2 class="text-3xl sm:text-4xl font-bold text-primary-red mb-10 pb-3 border-b-4 border-accent-gold inline-block">
+                💄 Beauty Stockings & Wellness Gifts
             </h2>
-            <p class="text-gray-700 mb-10 max-w-2xl text-lg">Achieve your best self with our curated selection of personal care and beauty essentials. Radiance within reach.</p>
+            <p class="text-gray-700 mb-10 max-w-2xl text-lg">Achieve holiday radiance. Our curated beauty essentials make perfect stocking stuffers.</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="shea butter organic raw skin hair beauty wellness">
-                    <img src="https://placehold.co/400x300/38a169/ffffff?text=Shea+Butter" alt="Pure organic raw shea butter for skin and hair" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-primary-green mb-2">Pure Organic Raw Shea Butter</h3>
-                    <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 3,150</p>
+                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="shea butter organic raw skin hair beauty wellness gift">
+                    <img src="https://placehold.co/400x300/006400/ffffff?text=Shea+Butter+Gift" alt="Pure organic raw shea butter for skin and hair" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-holiday-green mb-2">Pure Organic Raw Shea Butter</h3>
+                    <p class="text-lg text-primary-red font-extrabold mb-3">₦ 3,150</p>
                     <div class="flex space-x-2">
-                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SHEABUTTER" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SHEABUTTER" target="_blank" class="w-full text-center advanced-gradient-button text-primary-red font-semibold py-2 rounded-lg text-sm">View Gift Deal</a>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="roll-on deodorant nivea set beauty wellness">
-                    <img src="https://placehold.co/400x300/38a169/ffffff?text=NIVEA+Rollon+Set" alt="72-hour protection NIVEA roll-on deodorant set" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-primary-green mb-2">72h Roll-On (Pack of 3)</h3>
-                    <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 4,600</p>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="roll-on deodorant nivea set beauty wellness gift">
+                    <img src="https://placehold.co/400x300/006400/ffffff?text=Roll+On+Set+Gift" alt="72-hour protection NIVEA roll-on deodorant set" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-holiday-green mb-2">72h Roll-On (Pack of 3)</h3>
+                    <p class="text-lg text-primary-red font-extrabold mb-3">₦ 4,600</p>
                     <div class="flex space-x-2">
-                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_DEODORANT" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_DEODORANT" target="_blank" class="w-full text-center advanced-gradient-button text-primary-red font-semibold py-2 rounded-lg text-sm">View Gift Deal</a>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="clipper hair rechargeable grooming beauty wellness">
-                    <img src="https://placehold.co/400x300/FFD700/004d40?text=Clipper+Set" alt="Rechargeable electric hair clipper and grooming set" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-primary-green mb-2">Rechargeable Hair Clipper</h3>
-                    <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 8,100</p>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="clipper hair rechargeable grooming beauty wellness gift">
+                    <img src="https://placehold.co/400x300/FFD700/B22222?text=Clipper+Set+Gift" alt="Rechargeable electric hair clipper and grooming set" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-holiday-green mb-2">Rechargeable Hair Clipper</h3>
+                    <p class="text-lg text-primary-red font-extrabold mb-3">₦ 8,100</p>
                     <div class="flex space-x-2">
-                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_CLIPPER" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_CLIPPER" target="_blank" class="w-full text-center advanced-gradient-button text-primary-red font-semibold py-2 rounded-lg text-sm">View Gift Deal</a>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="serum vitamin c glow face skin beauty wellness">
-                    <img src="https://placehold.co/400x300/FFD700/004d40?text=Vitamin+C+Serum" alt="Powerful Vitamin C face serum for radiant skin" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-primary-green mb-2">Brightening Vitamin C Serum</h3>
-                    <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 5,950</p>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="serum vitamin c glow face skin beauty wellness gift">
+                    <img src="https://placehold.co/400x300/FFD700/B22222?text=Serum+Gift" alt="Powerful Vitamin C face serum for radiant skin" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-holiday-green mb-2">Brightening Vitamin C Serum</h3>
+                    <p class="text-lg text-primary-red font-extrabold mb-3">₦ 5,950</p>
                     <div class="flex space-x-2">
-                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SERUM" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SERUM" target="_blank" class="w-full text-center advanced-gradient-button text-primary-red font-semibold py-2 rounded-lg text-sm">View Gift Deal</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="fashion" class="p-8 md:p-12">
-            <h2 class="text-3xl sm:text-4xl font-bold text-primary-green mb-10 pb-3 border-b-4 border-accent-gold inline-block">
-                👗 Curated Style Vault
+            <h2 class="text-3xl sm:text-4xl font-bold text-primary-red mb-10 pb-3 border-b-4 border-accent-gold inline-block">
+                🎅 Festive Style Vault
             </h2>
-            <p class="text-gray-700 mb-10 max-w-2xl text-lg">Redefine your wardrobe. Discover the latest trends and timeless pieces that offer both comfort and sophistication.</p>
+            <p class="text-gray-700 mb-10 max-w-2xl text-lg">Dress to impress this holiday season with our curated fashion finds and accessories.</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="wallet leather men accessories fashion style">
-                    <img src="https://placehold.co/400x300/FFD700/004d40?text=Leather+Wallet" alt="Premium genuine leather bifold wallet for men" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-primary-green mb-2">Premium Leather Bifold Wallet</h3>
-                    <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 10,500</p>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="wallet leather men accessories fashion style gift">
+                    <img src="https://placehold.co/400x300/FFD700/B22222?text=Leather+Wallet+Gift" alt="Premium genuine leather bifold wallet for men" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-holiday-green mb-2">Premium Leather Bifold Wallet</h3>
+                    <p class="text-lg text-primary-red font-extrabold mb-3">₦ 10,500</p>
                     <div class="flex space-x-2">
-                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_WALLET" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_WALLET" target="_blank" class="w-full text-center advanced-gradient-button text-primary-red font-semibold py-2 rounded-lg text-sm">View Gift Deal</a>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="sneakers shoes casual men fashion style">
-                    <img src="https://placehold.co/400x300/FFD700/004d40?text=Men's+Sneakers" alt="Stylish men's casual walking sneakers for everyday wear" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-primary-green mb-2">Stylish Men's Sneakers</h3>
-                    <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 11,800</p>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="sneakers shoes casual men fashion style gift">
+                    <img src="https://placehold.co/400x300/FFD700/B22222?text=Sneakers+Gift" alt="Stylish men's casual walking sneakers for everyday wear" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-holiday-green mb-2">Stylish Men's Sneakers</h3>
+                    <p class="text-lg text-primary-red font-extrabold mb-3">₦ 11,800</p>
                     <div class="flex space-x-2">
-                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SNEAKERS" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SNEAKERS" target="_blank" class="w-full text-center advanced-gradient-button text-primary-red font-semibold py-2 rounded-lg text-sm">View Gift Deal</a>
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="watch bracelet set gift men accessories fashion">
-                    <img src="https://placehold.co/400x300/004d40/ffffff?text=Watch+and+Bracelet" alt="5-piece watch and bracelet gift set for him" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-primary-green mb-2">5-Piece Watch & Bracelet Set</h3>
-                    <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 9,150</p>
+                    <img src="https://placehold.co/400x300/006400/ffffff?text=Watch+Set+Gift" alt="5-piece watch and bracelet gift set for him" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-holiday-green mb-2">5-Piece Watch & Bracelet Set</h3>
+                    <p class="text-lg text-primary-red font-extrabold mb-3">₦ 9,150</p>
                     <div class="flex space-x-2">
-                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_WATCHSET" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_WATCHSET" target="_blank" class="w-full text-center advanced-gradient-button text-primary-red font-semibold py-2 rounded-lg text-sm">View Gift Deal</a>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="ankara blouse women print fashion style african">
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="ankara blouse women print fashion style african festive gift">
                     <img src="ankara.jpg" alt="Modern women's African Ankara print stylish blouse" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-primary-green mb-2">Modern Ankara Print Blouse</h3>
-                    <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 15,200</p>
+                    <h3 class="text-xl font-semibold text-holiday-green mb-2">Modern Ankara Print Blouse</h3>
+                    <p class="text-lg text-primary-red font-extrabold mb-3">₦ 15,200</p>
                     <div class="flex space-x-2">
-                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_ANKARA_FASHION" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_ANKARA_FASHION" target="_blank" class="w-full text-center advanced-gradient-button text-primary-red font-semibold py-2 rounded-lg text-sm">View Gift Deal</a>
                     </div>
                 </div>
             </div>
@@ -336,17 +336,17 @@
 
     </main>
 
-    <section id="newsletter" class="bg-primary-green text-white py-16 mt-16 shadow-2xl relative z-10 rounded-t-3xl border-t-4 border-accent-gold">
+    <section id="newsletter" class="bg-primary-red text-white py-16 mt-16 shadow-2xl relative z-10 rounded-t-3xl border-t-4 border-accent-gold">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-3 text-accent-gold">Access Elite Deals!</h2>
-            <p class="text-lg mb-8 text-green-200">Subscribe for exclusive daily deals delivered straight to your inbox. Be the first to secure massive savings!</p>
+            <h2 class="text-3xl font-bold mb-3 text-accent-gold">Access Exclusive Holiday Deals!</h2>
+            <p class="text-lg mb-8 text-light-snow">Subscribe for our last-minute daily gift deals delivered straight to your inbox. Secure massive holiday savings!</p>
 
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <input type="email" id="email-input" placeholder="Your best email for top offers"
+                <input type="email" id="email-input" placeholder="Your best email for top holiday offers"
                        class="flex-grow p-4 text-gray-800 advanced-input rounded-xl"
                        aria-label="Newsletter Email Input">
                 <button id="subscribe-button" onclick="handleSubscribe()"
-                        class="advanced-gradient-button text-primary-green font-bold text-lg py-4 px-8 rounded-xl flex items-center justify-center">
+                        class="advanced-gradient-button text-primary-red font-bold text-lg py-4 px-8 rounded-xl flex items-center justify-center">
                     Subscribe Now
                 </button>
             </div>
@@ -354,17 +354,17 @@
         </div>
     </section>
 
-    <footer class="bg-primary-green text-white py-8 border-t-8 border-accent-gold shadow-inner-xl relative z-10">
+    <footer class="bg-primary-red text-white py-8 border-t-8 border-accent-gold shadow-inner-xl relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="mb-4 text-3xl font-extrabold">
-                <span class="text-white">Top</span>
+                <span class="text-light-snow">Top</span>
                 <span class="text-accent-gold ml-1">Roll</span>
             </div>
-            <p class="text-sm text-green-300 mb-4 opacity-80">© 2025 Top Roll. All rights reserved. Your trusted gateway to value.</p>
+            <p class="text-sm text-light-snow mb-4 opacity-80">© 2025 Top Roll. Merry Christmas and Happy Holidays!</p>
             <div class="space-x-4 text-sm mt-4">
-                <a href="#" class="text-green-200 hover:text-accent-gold transition duration-200">Privacy Policy</a>
-                <a href="#" class="text-green-200 hover:text-accent-gold transition duration-200">Terms of Service</a>
-                <a href="#" class="text-green-200 hover:text-accent-gold transition duration-200">Disclaimer</a>
+                <a href="#" class="text-light-snow hover:text-accent-gold transition duration-200">Privacy Policy</a>
+                <a href="#" class="text-light-snow hover:text-accent-gold transition duration-200">Terms of Service</a>
+                <a href="#" class="text-light-snow hover:text-accent-gold transition duration-200">Disclaimer</a>
             </div>
         </div>
     </footer>
@@ -392,7 +392,7 @@
                 img.alt = `Hero Image ${index + 1}`;
                 img.classList.add('slide-image');
 
-                // Fallback logic for missing files (simplified by removing 'images/' prefix from heroImages array)
+                // Fallback logic for missing files 
                 img.onerror = function() {
                     console.error(`Error loading image: ${src}. Check file path.`);
                     // Fallback to a placehold.co if all local files fail
@@ -406,7 +406,7 @@
             });
 
             // Start the transition loop
-            sliderInterval = setInterval(nextSlide, 7000); // Change image every 7 seconds
+            sliderInterval = setInterval(nextSlide, 7000); 
         }
 
         function nextSlide() {
@@ -427,20 +427,14 @@
 
         window.toggleMobileMenu = function() {
             const menu = document.getElementById('mobile-menu');
-            // Get the path element inside the menu button's SVG
             const iconPath = document.getElementById('menu-icon'); 
-            
             const isOpen = menu.classList.toggle('open');
-            // Prevent scrolling of the body when menu is open
             document.body.classList.toggle('overflow-hidden', isOpen);
 
-            // Toggle the icon for better UX (Hamburger <-> Close)
             if (iconPath) {
                 if (isOpen) {
-                    // Change to 'X' icon (close)
                     iconPath.setAttribute('d', "M6 18L18 6M6 6l12 12"); 
                 } else {
-                    // Change back to 'hamburger' icon (menu)
                     iconPath.setAttribute('d', "M4 6h16M4 12h16m-7 6h7"); 
                 }
             }
@@ -453,32 +447,29 @@
             menu.classList.remove('open');
             document.body.classList.remove('overflow-hidden');
             
-            // Ensure icon reverts to hamburger when closed via link click
             if (iconPath) {
                 iconPath.setAttribute('d', "M4 6h16M4 12h16m-7 6h7"); 
             }
         }
 
 
-        // --- 3. Search/Filter Logic ---
+        // --- 3. Search/Filter Logic (Unchanged) ---
 
         window.handleSearch = function() {
             const inputElement = document.getElementById('search-input');
             const messageElement = document.getElementById('search-message');
             const rawQuery = inputElement.value.trim();
             const query = rawQuery.toLowerCase();
-            // Select all hardcoded product cards in the entire document
             const cards = document.querySelectorAll('.product-card');
 
-            messageElement.classList.remove('text-red-500', 'text-secondary-green', 'text-gray-600');
+            messageElement.classList.remove('text-red-500', 'text-holiday-green', 'text-gray-600');
 
             if (query.length < 3) {
-                // If query is too short, reset the filter view
                 cards.forEach(card => {
                     card.style.display = 'block';
                     card.style.opacity = '1';
                 });
-                messageElement.textContent = 'Enter at least 3 characters to search, or click Filter Deals to reset view.';
+                messageElement.textContent = 'Enter at least 3 characters to search, or click Find Gifts to reset view.';
                 messageElement.classList.add('text-gray-600');
                 return;
             }
@@ -486,31 +477,27 @@
             let matchesFound = 0;
 
             cards.forEach(card => {
-                // Read keywords from the data-keywords attribute
                 const keywords = card.getAttribute('data-keywords').toLowerCase();
 
                 if (keywords.includes(query)) {
-                    // Match found: Show it
                     card.style.display = 'block';
                     card.style.opacity = '1';
                     matchesFound++;
                 } else {
-                    // No match: Hide it entirely
                     card.style.display = 'none';
                 }
             });
 
-            // Update user message
             if (matchesFound > 0) {
-                messageElement.textContent = `Found ${matchesFound} top deals matching "${rawQuery}". Scroll down!`;
-                messageElement.classList.add('text-secondary-green');
+                messageElement.textContent = `Found ${matchesFound} top holiday deals matching "${rawQuery}". Scroll down!`;
+                messageElement.classList.add('text-holiday-green');
             } else {
-                messageElement.textContent = `No results found for "${rawQuery}". Try a different keyword (e.g., 'power' or 'dress').`;
+                messageElement.textContent = `No results found for "${rawQuery}". Try a different keyword (e.g., 'watch' or 'serum').`;
                 messageElement.classList.add('text-red-500');
             }
         }
 
-        // --- 4. Subscription Logic (Static Acknowledgment) ---
+        // --- 4. Subscription Logic (Unchanged) ---
 
         window.handleSubscribe = function() {
             const emailInput = document.getElementById('email-input');
@@ -518,7 +505,6 @@
             const email = emailInput.value.trim();
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            // Clear previous messages and disable button
             messageElement.classList.remove('text-red-300', 'text-accent-gold');
             
             if (!email || !emailRegex.test(email)) {
@@ -527,15 +513,13 @@
                 return;
             }
 
-            // Static Success Message
-            messageElement.textContent = `Success! ${email} is now subscribed to Top Roll's elite deals (static acknowledgement).`;
+            messageElement.textContent = `Success! ${email} is now subscribed to Top Roll's elite holiday deals (static acknowledgement).`;
             messageElement.classList.add('text-accent-gold');
             emailInput.value = '';
         }
 
-        // --- 5. Initialisation Wrapper ---
+        // --- 5. Initialisation Wrapper (Unchanged) ---
         window.initCode = function() {
-            // Initialize the slider
             initSlider();
         }
 
