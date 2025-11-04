@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top Roll - Daily Essentials, Best Prices & Deals in Mobile, Beauty, Fashion</title>
 
-    <!-- SEO Enhancements -->
     <meta name="description" content="Top Roll is your primary source for discovering the best, most affordable deals on high-demand everyday essentials in Mobile Tech, Health & Beauty, and trending Fashion. Shop smart and save big!">
     <meta name="keywords" content="Nigeria deals, affiliate marketing, cheap electronics, health products, beauty essentials, affordable fashion, Jumia deals, Top Roll, mobile tech, best prices, smart watch, shea butter, ankara, wifi">
     <meta name="author" content="Top Roll">
 
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // Tailwind Configuration for Gold and Green
@@ -93,30 +91,25 @@
 
 <body class="font-sans" onload="initCode()">
 
-    <!-- Header & Navigation -->
     <header class="bg-primary-green bg-opacity-95 shadow-2xl sticky top-0 z-30 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <!-- Logo -->
             <div class="text-4xl font-extrabold flex items-center">
                 <span class="text-white">Top</span>
                 <span class="text-accent-gold ml-1">Roll</span>
             </div>
             
-            <!-- Desktop Navigation Links -->
             <nav class="hidden md:flex space-x-8 text-lg font-bold">
                 <a href="#trending" class="text-red-300 hover:text-accent-gold transition duration-300">🔥 Trending</a>
                 <a href="#tech" class="text-green-200 hover:text-accent-gold transition duration-300">Tech Hub</a>
                 <a href="#beauty" class="text-green-200 hover:text-accent-gold transition duration-300">Beauty Lab</a>
                 <a href="#fashion" class="text-green-200 hover:text-accent-gold transition duration-300">Style Vault</a>
             </nav>
-            <!-- Mobile Menu Button -->
             <button class="md:hidden text-accent-gold focus:outline-none" onclick="toggleMobileMenu()" aria-label="Toggle Mobile Menu">
-                <svg class="w-8 h-8" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
     </header>
 
-    <!-- Mobile Menu Drawer (Hidden by default) -->
     <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-primary-green z-50 shadow-2xl md:hidden flex flex-col pt-20">
         <button class="absolute top-4 right-4 text-accent-gold focus:outline-none" onclick="closeMobileMenu()" aria-label="Close Mobile Menu">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -135,17 +128,12 @@
     </div>
 
 
-    <!-- Hero Section (Image Slider) -->
     <section class="hero-section text-white py-24 md:py-32 lg:py-40 rounded-b-3xl shadow-2xl relative z-10">
-        <!-- Image Slider Container (Z-Index 0) -->
         <div id="hero-slider" class="absolute inset-0">
-            <!-- Images populated by JavaScript -->
-        </div>
+            </div>
 
-        <!-- Green/Gold Overlay (Z-Index 1) -->
         <div class="hero-overlay"></div>
 
-        <!-- Text Content (Z-Index 2) -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
             <h1 class="text-5xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight mb-6 leading-tight">
                 Unlock <span class="text-accent-gold">Tomorrow's Deals</span> Today.
@@ -159,7 +147,6 @@
         </div>
     </section>
 
-    <!-- Search Bar Section -->
     <section class="py-10 -mt-16 relative z-20">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 bg-white p-6 rounded-2xl shadow-xl border-t-4 border-accent-gold">
             <h2 class="sr-only">Search for Products</h2>
@@ -177,207 +164,170 @@
         </div>
     </section>
 
-    <!-- Main Content - Featured Categories -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 space-y-20">
 
-        <!-- Section 1: Trending Deals -->
         <section id="trending" class="p-8 md:p-12 border-4 border-dashed border-accent-gold/50">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-primary-green mb-10 pb-3 border-b-4 border-accent-gold inline-block">
                 🔥 Trending Deals Spotlight
             </h2>
             <p class="text-gray-700 mb-10 max-w-2xl text-lg">These are the essential products everyone is buying right now. Don't miss out on these limited-time top sellers.</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Trending Card 1: Smartwatch -->
                 <div class="bg-white p-6 rounded-xl shadow-2xl card-hover product-card" data-keywords="smartwatch health fitness sport tech mobile trending">
-                    <img src="https://placehold.co/400x300/C04000/ffffff?text=Smart+Watch+PRO" alt="Latest generation smartwatch with health tracking features" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
+                    <img src="stopwatch.jpg" alt="Latest generation smartwatch with health tracking features" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
                     <h3 class="text-xl font-bold text-primary-green mb-1">Smartwatch Pro 2025</h3>
                     <p class="text-sm text-gray-500 mb-2">High-demand item!</p>
                     <p class="text-lg text-primary-green font-extrabold mb-3">₦ 25,999</p>
                     <div class="flex space-x-2">
-                        <!-- !!! AFFILIATE LINK HERE !!! -->
                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SMARTWATCH" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
                     </div>
                 </div>
-                 <!-- Trending Card 2: Vitamin C Serum -->
-                <div class="bg-white p-6 rounded-xl shadow-2xl card-hover product-card" data-keywords="serum vitamin c glow face skin beauty wellness trending">
+                 <div class="bg-white p-6 rounded-xl shadow-2xl card-hover product-card" data-keywords="serum vitamin c glow face skin beauty wellness trending">
                     <img src="https://placehold.co/400x300/38a169/ffffff?text=Vitamin+C+Serum" alt="Powerful Vitamin C face serum for radiant skin" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
                     <h3 class="text-xl font-bold text-primary-green mb-1">Brightening Vitamin C Serum</h3>
                     <p class="text-sm text-gray-500 mb-2">Selling Fast!</p>
                     <p class="text-lg text-primary-green font-extrabold mb-3">₦ 5,950</p>
                     <div class="flex space-x-2">
-                         <!-- !!! AFFILIATE LINK HERE !!! -->
-                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SERUM" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SERUM" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
                     </div>
                 </div>
-                 <!-- Trending Card 3: Ankara Print Blouse -->
-                <div class="bg-white p-6 rounded-xl shadow-2xl card-hover product-card" data-keywords="ankara blouse women print fashion style african trending">
-                    <img src="https://placehold.co/400x300/8B4513/ffffff?text=Ankara+Blouse" alt="Modern women's African Ankara print stylish blouse" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
+                 <div class="bg-white p-6 rounded-xl shadow-2xl card-hover product-card" data-keywords="ankara blouse women print fashion style african trending">
+                    <img src="ankara.jpg" alt="Modern women's African Ankara print stylish blouse" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
                     <h3 class="text-xl font-bold text-primary-green mb-1">Modern Ankara Print Blouse</h3>
                     <p class="text-sm text-gray-500 mb-2">Must-Have Style!</p>
                     <p class="text-lg text-primary-green font-extrabold mb-3">₦ 15,200</p>
                     <div class="flex space-x-2">
-                         <!-- !!! AFFILIATE LINK HERE !!! -->
-                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_ANKARA" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_ANKARA" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
                     </div>
                 </div>
-                <!-- Trending Card 4: Mesh WiFi -->
                 <div class="bg-white p-6 rounded-xl shadow-2xl card-hover product-card" data-keywords="wifi mesh router internet network tech mobile trending">
                     <img src="https://placehold.co/400x300/004d40/ffffff?text=Mesh+WiFi+System" alt="Whole-home mesh WiFi system for fast internet" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
                     <h3 class="text-xl font-bold text-primary-green mb-1">Whole-Home Mesh WiFi Kit</h3>
                     <p class="text-sm text-gray-500 mb-2">Essential Upgrade!</p>
                     <p class="text-lg text-primary-green font-extrabold mb-3">₦ 45,000</p>
                     <div class="flex space-x-2">
-                         <!-- !!! AFFILIATE LINK HERE !!! -->
-                        <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_WIFI" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
+                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_WIFI" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 2: Mobile & Tech Essentials -->
         <section id="tech" class="p-8 md:p-12">
             <h2 class="text-3xl sm:text-4xl font-bold text-primary-green mb-10 pb-3 border-b-4 border-accent-gold inline-block">
                 ⚡ Mobile & Tech Nexus
             </h2>
             <p class="text-gray-700 mb-10 max-w-2xl text-lg">Stay connected and powered up. Explore cutting-edge gadgets and essential mobile accessories designed for the modern Nigerian.</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Smartwatch -->
                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="smartwatch health fitness sport tech mobile">
-                    <img src="https://placehold.co/400x300/004d40/ffffff?text=Smart+Watch" alt="Latest generation smartwatch with health tracking features" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
+                    <img src="stopwatch.jpg" alt="Latest generation smartwatch with health tracking features" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
                     <h3 class="text-xl font-semibold text-primary-green mb-2">Health Tracking Smartwatch</h3>
                     <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 22,500</p>
                     <div class="flex space-x-2">
-                        <!-- !!! AFFILIATE LINK HERE !!! -->
                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SMARTWATCH" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
                     </div>
                 </div>
-                <!-- Power Bank -->
                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="power bank rapid charge 20000mah tech mobile">
-                    <img src="https://placehold.co/400x300/004d40/ffffff?text=Power+Bank" alt="High capacity 20,000mAh power bank for mobile devices" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
+                    <img src="powerbank.jpg" alt="High capacity 20,000mAh power bank for mobile devices" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
                     <h3 class="text-xl font-semibold text-primary-green mb-2">20,000mAh Rapid Power</h3>
                     <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 11,500</p>
                     <div class="flex space-x-2">
-                        <!-- !!! AFFILIATE LINK HERE !!! -->
                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_POWERBANK" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
                     </div>
                 </div>
-                <!-- Wireless Earbuds -->
                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="wireless earbuds tws audio music tech mobile">
                     <img src="https://placehold.co/400x300/38a169/ffffff?text=Wireless+Earbuds" alt="TWS Budget Wireless Earbuds for immersive audio" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
                     <h3 class="text-xl font-semibold text-primary-green mb-2">TWS Budget EarPods</h3>
                     <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 7,990</p>
                     <div class="flex space-x-2">
-                        <!-- !!! AFFILIATE LINK HERE !!! -->
                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_EARBUDS" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
                     </div>
                 </div>
-                <!-- Fast Charger -->
                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="charger fast 45w usb wall tech mobile">
                     <img src="https://placehold.co/400x300/FFD700/004d40?text=USB+Charger" alt="45W Ultra-Fast USB Wall Charger for quick charging" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
                     <h3 class="text-xl font-semibold text-primary-green mb-2">45W Ultra-Fast Charger</h3>
                     <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 3,450</p>
                     <div class="flex space-x-2">
-                        <!-- !!! AFFILIATE LINK HERE !!! -->
                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_CHARGER" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 3: Health & Beauty -->
         <section id="beauty" class="p-8 md:p-12">
             <h2 class="text-3xl sm:text-4xl font-bold text-primary-green mb-10 pb-3 border-b-4 border-accent-gold inline-block">
                 💖 Beauty & Wellness Matrix
             </h2>
             <p class="text-gray-700 mb-10 max-w-2xl text-lg">Achieve your best self with our curated selection of personal care and beauty essentials. Radiance within reach.</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                 <!-- Organic Shea Butter -->
-                <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="shea butter organic raw skin hair beauty wellness">
+                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="shea butter organic raw skin hair beauty wellness">
                     <img src="https://placehold.co/400x300/38a169/ffffff?text=Shea+Butter" alt="Pure organic raw shea butter for skin and hair" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
                     <h3 class="text-xl font-semibold text-primary-green mb-2">Pure Organic Raw Shea Butter</h3>
                     <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 3,150</p>
                     <div class="flex space-x-2">
-                        <!-- !!! AFFILIATE LINK HERE !!! -->
                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SHEABUTTER" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
                     </div>
                 </div>
-                <!-- Roll-on Pack -->
                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="roll-on deodorant nivea set beauty wellness">
                     <img src="https://placehold.co/400x300/38a169/ffffff?text=NIVEA+Rollon+Set" alt="72-hour protection NIVEA roll-on deodorant set" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
                     <h3 class="text-xl font-semibold text-primary-green mb-2">72h Roll-On (Pack of 3)</h3>
                     <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 4,600</p>
                     <div class="flex space-x-2">
-                        <!-- !!! AFFILIATE LINK HERE !!! -->
                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_DEODORANT" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
                     </div>
                 </div>
-                <!-- Hair Clippers -->
                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="clipper hair rechargeable grooming beauty wellness">
                     <img src="https://placehold.co/400x300/FFD700/004d40?text=Clipper+Set" alt="Rechargeable electric hair clipper and grooming set" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
                     <h3 class="text-xl font-semibold text-primary-green mb-2">Rechargeable Hair Clipper</h3>
                     <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 8,100</p>
                     <div class="flex space-x-2">
-                        <!-- !!! AFFILIATE LINK HERE !!! -->
                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_CLIPPER" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
                     </div>
                 </div>
-                <!-- Vitamin C Serum -->
                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="serum vitamin c glow face skin beauty wellness">
                     <img src="https://placehold.co/400x300/FFD700/004d40?text=Vitamin+C+Serum" alt="Powerful Vitamin C face serum for radiant skin" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
                     <h3 class="text-xl font-semibold text-primary-green mb-2">Brightening Vitamin C Serum</h3>
                     <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 5,950</p>
                     <div class="flex space-x-2">
-                        <!-- !!! AFFILIATE LINK HERE !!! -->
                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SERUM" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 4: Fashion Finds -->
         <section id="fashion" class="p-8 md:p-12">
             <h2 class="text-3xl sm:text-4xl font-bold text-primary-green mb-10 pb-3 border-b-4 border-accent-gold inline-block">
                 👗 Curated Style Vault
             </h2>
             <p class="text-gray-700 mb-10 max-w-2xl text-lg">Redefine your wardrobe. Discover the latest trends and timeless pieces that offer both comfort and sophistication.</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Premium Leather Wallet -->
                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="wallet leather men accessories fashion style">
                     <img src="https://placehold.co/400x300/FFD700/004d40?text=Leather+Wallet" alt="Premium genuine leather bifold wallet for men" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
                     <h3 class="text-xl font-semibold text-primary-green mb-2">Premium Leather Bifold Wallet</h3>
                     <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 10,500</p>
                     <div class="flex space-x-2">
-                        <!-- !!! AFFILIATE LINK HERE !!! -->
                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_WALLET" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
                     </div>
                 </div>
-                <!-- Casual Sneakers -->
                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="sneakers shoes casual men fashion style">
                     <img src="https://placehold.co/400x300/FFD700/004d40?text=Men's+Sneakers" alt="Stylish men's casual walking sneakers for everyday wear" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
                     <h3 class="text-xl font-semibold text-primary-green mb-2">Stylish Men's Sneakers</h3>
                     <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 11,800</p>
                     <div class="flex space-x-2">
-                        <!-- !!! AFFILIATE LINK HERE !!! -->
                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_SNEAKERS" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
                     </div>
                 </div>
-                <!-- Watch Set -->
                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="watch bracelet set gift men accessories fashion">
                     <img src="https://placehold.co/400x300/004d40/ffffff?text=Watch+and+Bracelet" alt="5-piece watch and bracelet gift set for him" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
                     <h3 class="text-xl font-semibold text-primary-green mb-2">5-Piece Watch & Bracelet Set</h3>
                     <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 9,150</p>
                     <div class="flex space-x-2">
-                        <!-- !!! AFFILIATE LINK HERE !!! -->
                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_WATCHSET" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
                     </div>
                 </div>
-                <!-- Ankara Print Blouse -->
                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover product-card" data-keywords="ankara blouse women print fashion style african">
-                    <img src="https://placehold.co/400x300/38a169/ffffff?text=Ankara+Blouse" alt="Modern women's African Ankara print stylish blouse" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
+                    <img src="ankara.jpg" alt="Modern women's African Ankara print stylish blouse" class="w-full h-40 object-cover mb-4 rounded-lg shadow-sm">
                     <h3 class="text-xl font-semibold text-primary-green mb-2">Modern Ankara Print Blouse</h3>
                     <p class="text-lg text-secondary-green font-extrabold mb-3">₦ 15,200</p>
                     <div class="flex space-x-2">
-                        <!-- !!! AFFILIATE LINK HERE !!! -->
                         <a href="REPLACE_THIS_WITH_YOUR_AFFILIATE_LINK_FOR_ANKARA_FASHION" target="_blank" class="w-full text-center advanced-gradient-button text-primary-green font-semibold py-2 rounded-lg text-sm">View Deal Now</a>
                     </div>
                 </div>
@@ -386,7 +336,6 @@
 
     </main>
 
-    <!-- Newsletter Call to Action Banner -->
     <section id="newsletter" class="bg-primary-green text-white py-16 mt-16 shadow-2xl relative z-10 rounded-t-3xl border-t-4 border-accent-gold">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold mb-3 text-accent-gold">Access Elite Deals!</h2>
@@ -405,7 +354,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-primary-green text-white py-8 border-t-8 border-accent-gold shadow-inner-xl relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="mb-4 text-3xl font-extrabold">
@@ -422,13 +370,12 @@
     </footer>
 
 
-    <!-- JavaScript for Slider, Filtering, Menu, and Subscription -->
     <script>
         // --- 1. Hero Slider Logic ---
        const heroImages = [
-     'images/stopwatch.jpg',       // Tech Banner
-     'images/beauty.jpg',     // Beauty Banner
-     'images/ankara.jpg',    // Fashion Banner
+     'stopwatch.jpg',       // Tech Banner
+     'beauty.jpg',     // Beauty Banner
+     'ankara.jpg',    // Fashion Banner
     ];
 
         let currentSlide = 0;
@@ -438,14 +385,19 @@
             const sliderContainer = document.getElementById('hero-slider');
             if (!sliderContainer) return;
 
-         img.onerror = function() {
-    const fallbacks = [
-        'stopwatch.jpg', // fallback for first slide
-        'beauty.jpg',    // fallback for second slide
-        'ankara.jpg'     // fallback for third slide
-    ];
-    img.src = fallbacks[index] || 'fallback.jpg'; // safe default
-};
+            // CORRECTED: Creating the image element inside the loop
+            heroImages.forEach((src, index) => {
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = `Hero Image ${index + 1}`;
+                img.classList.add('slide-image');
+
+                // Fallback logic for missing files (simplified by removing 'images/' prefix from heroImages array)
+                img.onerror = function() {
+                    console.error(`Error loading image: ${src}. Check file path.`);
+                    // Fallback to a placehold.co if all local files fail
+                    img.src = 'https://placehold.co/1920x1080/004d40/ffffff?text=Top+Roll+Deals';
+                };
 
                 if (index === 0) {
                     img.classList.add('active');
@@ -471,19 +423,40 @@
             slides[currentSlide].classList.add('active');
         }
 
-        // --- 2. Mobile Menu Logic ---
+        // --- 2. Mobile Menu Logic - CORRECTED for UX and Accessibility ---
 
         window.toggleMobileMenu = function() {
             const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('open');
+            // Get the path element inside the menu button's SVG
+            const iconPath = document.getElementById('menu-icon'); 
+            
+            const isOpen = menu.classList.toggle('open');
             // Prevent scrolling of the body when menu is open
-            document.body.classList.toggle('overflow-hidden', menu.classList.contains('open'));
+            document.body.classList.toggle('overflow-hidden', isOpen);
+
+            // Toggle the icon for better UX (Hamburger <-> Close)
+            if (iconPath) {
+                if (isOpen) {
+                    // Change to 'X' icon (close)
+                    iconPath.setAttribute('d', "M6 18L18 6M6 6l12 12"); 
+                } else {
+                    // Change back to 'hamburger' icon (menu)
+                    iconPath.setAttribute('d', "M4 6h16M4 12h16m-7 6h7"); 
+                }
+            }
         }
 
         window.closeMobileMenu = function() {
             const menu = document.getElementById('mobile-menu');
+            const iconPath = document.getElementById('menu-icon');
+
             menu.classList.remove('open');
             document.body.classList.remove('overflow-hidden');
+            
+            // Ensure icon reverts to hamburger when closed via link click
+            if (iconPath) {
+                iconPath.setAttribute('d', "M4 6h16M4 12h16m-7 6h7"); 
+            }
         }
 
 
